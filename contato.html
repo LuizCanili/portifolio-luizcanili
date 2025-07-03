@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Meu Portfólio</title>
+    <!-- Link do arquivo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Links de navegação para todas as páginas -->
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="formacao.html">Formação e Idiomas</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <button id="theme-toggle">Alternar Tema</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contato-content">
+            <h1>Entre em Contato</h1>
+            <p>Se você tiver alguma dúvida, proposta ou apenas quiser conversar, preencha o formulário abaixo ou me envie um e-mail.</p>
+            
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            
+            <p>Ou envie um e-mail diretamente para: <a href="mailto:seuemail@exemplo.com">luizcanili@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Luiz Fernando Canili da Silva. Todos os direitos reservados.</p>
+    </footer>
+    <!-- Link do arquivo javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

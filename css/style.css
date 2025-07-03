@@ -1,0 +1,377 @@
+/* Reset básico para garantir consistência entre navegadores */
+body, h1, h2, h3, p, ul, li, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total do elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    color: #333; /* Cor do texto padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave para o site */
+    display: flex; /* Para centralizar o footer no final */
+    flex-direction: column; /* Para organizar o conteúdo em coluna */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+}
+
+/* --- Estilos do Cabeçalho (Header) --- */
+header {
+    background-color: #333; /* Cor de fundo escura para o cabeçalho */
+    color: #fff; /* Cor do texto no cabeçalho */
+    padding: 1rem 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Transforma os itens da lista em flexbox para alinhamento horizontal */
+    justify-content: center; /* Centraliza os itens do menu */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: #fff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 5px 10px; /* Espaçamento interno do link */
+    transition: background-color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555; /* Cor de fundo ao passar o mouse ou focar */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+/* --- Estilos do Conteúdo Principal (Main) --- */
+main {
+    flex: 1; /* Faz com que o main ocupe o espaço restante disponível, empurrando o footer para baixo */
+    padding: 20px; /* Espaçamento interno geral do conteúdo */
+    max-width: 960px; /* Largura máxima para o conteúdo */
+    margin: 20px auto; /* Centraliza o conteúdo horizontalmente com margem superior/inferior */
+    background-color: #fff; /* Cor de fundo para as seções de conteúdo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para destacar a caixa */
+}
+
+/* Estilos para títulos de seção */
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza títulos principais */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamanho maior para o título principal */
+}
+
+h2 {
+    font-size: 1.8em; /* Tamanho para subtítulos */
+}
+
+p {
+    margin-bottom: 10px; /* Espaçamento abaixo dos parágrafos */
+}
+
+/* Estilos para listas */
+ul {
+    list-style-type: disc; /* Marcadores de disco para listas não ordenadas */
+    margin-left: 20px; /* Recuo para os itens da lista */
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 5px; /* Espaçamento entre os itens da lista */
+}
+
+/* --- Estilos para a Foto de Perfil na página Sobre Mim --- */
+.profile-photo {
+    display: block; /* Garante que a imagem se comporte como um bloco para poder centralizar */
+    margin: 0 auto 20px auto; /* Centraliza horizontalmente e adiciona margem inferior */
+    width: 170px; /* Largura da imagem */
+    height: 170px; /* Altura da imagem */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    border: 3px solid #007bff; /* Borda colorida */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para destacar */
+}
+
+/* Estilo para a foto de perfil no modo escuro */
+body.dark-mode .profile-photo {
+    border-color: #6daff7; /* Borda mais clara no modo escuro */
+    box-shadow: 0 4px 8px rgba(255,255,255,0.2); /* Sombra clara */
+}
+
+/* --- Estilos da Seção de Portfólio --- */
+.projeto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center; /* Centraliza o texto dentro da caixa de projeto */
+}
+
+.projeto h2 {
+    color: #0056b3; /* Cor para o título do projeto */
+    margin-top: 0;
+}
+
+.projeto p {
+    margin-bottom: 10px;
+}
+
+.projeto a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos do Formulário de Contato --- */
+form {
+    display: flex; /* Organiza os elementos do formulário em coluna */
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos do formulário */
+    max-width: 500px; /* Largura máxima para o formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold; /* Negrito para os rótulos */
+    margin-bottom: 5px; /* Espaçamento abaixo do rótulo */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ocupa a largura total do container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Altura mínima para a área de texto */
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* --- Estilos do Rodapé (Footer) --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+}
+
+/* --- Responsividade Básica (Media Queries) --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Empilha os itens do menu em telas menores */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Reduz o espaçamento vertical */
+    }
+
+    main {
+        margin: 10px; /* Reduz a margem lateral em telas menores */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    /* Ajustes para o formulário em telas muito pequenas */
+    form {
+        padding: 15px;
+    }
+}
+
+/* --- Estilos para o Modo Escuro --- */
+body.dark-mode {
+    background-color: #222; /* Fundo escuro */
+    color: #eee; /* Texto claro */
+}
+
+body.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode nav ul li a {
+    color: #ccc;
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a:focus {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode main {
+    background-color: #333; /* Fundo mais escuro para o conteúdo */
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1); /* Sombra clara */
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #eee;
+}
+
+body.dark-mode .projeto {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode .projeto h2 {
+    color: #9bd7ff; /* Cor azul mais clara para títulos de projeto no modo escuro */
+}
+
+body.dark-mode .projeto a {
+    color: #6daff7; /* Cor do link em modo escuro */
+}
+
+body.dark-mode form {
+    background-color: #444;
+    border-color: #555;
+}
+
+body.dark-mode label {
+    color: #eee;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea {
+    background-color: #555;
+    color: #eee;
+    border-color: #777;
+}
+
+body.dark-mode input[type="text"]::placeholder, /* Estilo para placeholder */
+body.dark-mode input[type="email"]::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #bbb;
+}
+
+body.dark-mode button[type="submit"] {
+    background-color: #6daff7;
+    color: #1a1a1a;
+}
+
+body.dark-mode button[type="submit"]:hover {
+    background-color: #9bd7ff;
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+/* Estilo para o botão de toggle*/
+#theme-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 20px; /* Ajuste a posição conforme necessário */
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* --- Estilos para Galerias de Imagens --- */
+/* Define um layout flexível para as galerias de imagens */
+.gallery {
+    display: flex; /* Usa flexbox para organizar as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha para a próxima fila */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-top: 30px; /* Margem superior para separar do texto */
+    padding: 10px; /* Preenchimento interno */
+    background-color: #f0f0f0; /* Fundo suave para a galeria */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* Sombra interna sutil */
+}
+
+.gallery img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do seu container */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 300px; /* Largura base para as imagens na galeria */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 5px; /* Cantos arredondados para as imagens */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para destacar a imagem */
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.gallery img:hover {
+    transform: scale(1.03); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+/* Estilos para galerias no modo escuro */
+body.dark-mode .gallery {
+    background-color: #444; /* Fundo mais escuro para a galeria */
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.1); /* Sombra interna clara */
+}
+
+body.dark-mode .gallery img {
+    border-color: #666; /* Borda mais clara */
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1); /* Sombra clara */
+}
+
+/* Responsividade para as imagens da galeria */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%; /* Imagens ocupam a largura total em telas menores */
+        max-width: 400px; /* Limite máximo para imagens em telas menores */
+    }
+}
