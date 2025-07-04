@@ -1,6 +1,6 @@
 /*Este código permite alternar entre um tema claro e um tema escuro.*/
 
-// Seleciona o botão que vai ativar a mudança de tema (você precisará criar um no HTML)
+// Seleciona o botão que vai ativar a mudança de tema
 const themeToggleButton = document.getElementById('theme-toggle');
 
 // Verifica se o botão existe na página atual

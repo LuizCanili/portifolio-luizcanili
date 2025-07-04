@@ -50,7 +50,7 @@ nav ul li a:focus {
     border-radius: 4px; /* Cantos arredondados */
 }
 
-/* --- Estilos do Conteúdo Principal (Main) --- */
+/* --- Estilos do Conteúdo Principal --- */
 main {
     flex: 1; /* Faz com que o main ocupe o espaço restante disponível, empurrando o footer para baixo */
     padding: 20px; /* Espaçamento interno geral do conteúdo */
