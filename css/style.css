@@ -50,6 +50,34 @@ nav ul li a:focus {
     border-radius: 4px; /* Cantos arredondados */
 }
 
+/* --- Estilos para a Imagem Principal na página Inicial (index.html) --- */
+.main-hero-image {
+    display: block; /* Garante que a imagem ocupe sua própria linha */
+    max-width: 100%; /* Garante que a imagem não transborde o container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona margem superior/inferior */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave para destacar */
+}
+
+/* Estilo para a imagem principal no modo escuro */
+body.dark-mode .main-hero-image {
+    box-shadow: 0 4px 8px rgba(255,255,255,0.1); /* Sombra clara */
+}
+
+/* --- Ajustes de responsividade para a imagem principal --- */
+@media (max-width: 768px) {
+    .main-hero-image {
+        margin: 15px auto; /* Reduz a margem em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-hero-image {
+        border-radius: 5px; /* Cantos um pouco menos arredondados em telas muito pequenas */
+    }
+}
+
 /* --- Estilos do Conteúdo Principal --- */
 main {
     flex: 1; /* Faz com que o main ocupe o espaço restante disponível, empurrando o footer para baixo */
